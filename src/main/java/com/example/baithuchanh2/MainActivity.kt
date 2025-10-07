@@ -14,17 +14,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.baithuchanh2.ui.theme.Baithuchanh2Theme   // 💡 import theme của project bạn
+import com.example.baithuchanh2.ui.theme.Baithuchanh2Theme   
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            // để sử dụng màu sắc, font chữ, shape đồng nhất của project
             Baithuchanh2Theme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background  // vẫn dùng MaterialTheme để truy cập màu
+                    color = MaterialTheme.colorScheme.background  /
                 ) {
                     NumberApp()
                 }
@@ -36,9 +35,9 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NumberApp() {
-    var inputText by remember { mutableStateOf("") }     // Lưu giá trị người dùng nhập
-    var errorMessage by remember { mutableStateOf("") }  // Thông báo lỗi
-    var numberList by remember { mutableStateOf(listOf<Int>()) } // Danh sách số
+    var inputText by remember { mutableStateOf("") }     
+    var errorMessage by remember { mutableStateOf("") }  
+    var numberList by remember { mutableStateOf(listOf<Int>()) } 
 
     Column(
         modifier = Modifier
@@ -82,7 +81,7 @@ fun NumberApp() {
                     }
                 },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary  // 💡 dùng màu trong theme
+                    containerColor = MaterialTheme.colorScheme.primary  
                 )
             ) {
                 Text("Tạo")
