@@ -57,7 +57,7 @@ fun EmailApp() {
             value = email,
             onValueChange = {
                 email = it
-                message = "" // xóa thông báo cũ khi nhập lại
+                message = "" 
             },
             label = { Text("Email") },
             modifier = Modifier.fillMaxWidth(0.9f)
@@ -85,7 +85,7 @@ fun EmailApp() {
                     }
                     else -> {
                         message = "Bạn đã nhập email hợp lệ"
-                        messageColor = Color(0xFF008000) // màu xanh
+                        messageColor = Color(0xFF008000) 
                     }
                 }
             },
